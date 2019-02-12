@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="苏大Wifi登录器.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:苏大Wifi登录器"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     MaxWidth="400" MaxHeight="400" MinHeight="300" MinWidth="300">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<TextBlock x:Name="响应信息" Grid.Row="0" TextWrapping="WrapWholeWords"/>
+		<TextBox x:Name="用户名" PlaceholderText="用户名" Grid.Row="1" VerticalAlignment="Top"/>
+		<PasswordBox x:Name="密码" Grid.Row="2" VerticalAlignment="Top"/>
+		<Grid Grid.Row="3">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name="登录" Content="登录" Grid.Column ="0" HorizontalAlignment="Center"/>
+			<Button x:Name="注销" Content="注销" Grid.Column ="1" HorizontalAlignment="Center"/>
+		</Grid>
+		<TextBlock x:Name="Wifi信息" Grid.Row="4" TextWrapping="WrapWholeWords"/>
+		<Button x:Name="刷新" Content="刷新" Grid.Row="5" HorizontalAlignment="Center"/>
+		<ToggleSwitch x:Name="后台任务" Header="始终为我自动登录苏大Wifi（后台）" Grid.Row="6"/>
+		<ToggleSwitch x:Name="任务通知" Header="连接时发出通知" Grid.Row="7"/>
+	</Grid>
+</Page>
