@@ -13,26 +13,32 @@
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-		<TextBlock x:Name="响应信息" Grid.Row="0" TextWrapping="WrapWholeWords"/>
-		<TextBox x:Name="用户名" PlaceholderText="用户名" Grid.Row="1" VerticalAlignment="Top"/>
-		<PasswordBox x:Name="密码" Grid.Row="2" VerticalAlignment="Top"/>
-		<Grid Grid.Row="3">
+		<TextBlock x:Name="响应信息" Grid.Row="0" TextWrapping="WrapWholeWords" Margin="8"/>
+		<Grid Grid.Row="1">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition/>
-				<ColumnDefinition/>
+				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
-			<Button x:Name="登录" Content="登录" Grid.Column ="0" HorizontalAlignment="Center"/>
-			<Button x:Name="注销" Content="注销" Grid.Column ="1" HorizontalAlignment="Center"/>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<TextBox x:Name="用户名" PlaceholderText="用户名" Grid.Column="0" Grid.Row="0" Margin="8"/>
+			<PasswordBox x:Name="密码" Grid.Column="0" Grid.Row="1" PlaceholderText="密码" Margin="8"/>
+			<ComboBox x:Name="认证域ComboBox" Grid.Column="0" Grid.Row="2" Margin="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+			<Button x:Name="登录" Content="登录" Grid.Column ="1" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="8"/>
+			<Button x:Name="注销" Content="注销" Grid.Column ="1" Grid.Row="1" Margin="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+			<Button x:Name="删除信息" Content="删除信息" Grid.Column ="1" Grid.Row="2" Margin="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 		</Grid>
-		<TextBlock x:Name="Wifi信息" Grid.Row="4" TextWrapping="WrapWholeWords"/>
-		<Button x:Name="刷新" Content="刷新" Grid.Row="5" HorizontalAlignment="Center"/>
-		<ToggleSwitch x:Name="后台任务" Header="始终为我自动登录苏大Wifi（后台）" Grid.Row="6"/>
-		<ToggleSwitch x:Name="任务通知" Header="连接时发出通知" Grid.Row="7"/>
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			<ToggleSwitch x:Name="后台任务" Header="始终为我自动登录苏大Wifi（后台）" Grid.Column ="0" Margin="8"/>
+			<ToggleSwitch x:Name="任务通知" Header="连接时发出通知" Grid.Column="1" Margin="8"/>
+		</Grid>
 	</Grid>
 </Page>

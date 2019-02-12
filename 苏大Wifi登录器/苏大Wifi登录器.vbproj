@@ -141,7 +141,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="Wifi连接.vb" />
     <Compile Include="苏大登录.vb" />
   </ItemGroup>
   <ItemGroup>
